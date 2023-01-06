@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WealthWise", "WealthWise.csproj", "{EC074A7F-46FA-4F32-8547-98379FCA09BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC074A7F-46FA-4F32-8547-98379FCA09BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC074A7F-46FA-4F32-8547-98379FCA09BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC074A7F-46FA-4F32-8547-98379FCA09BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC074A7F-46FA-4F32-8547-98379FCA09BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72EF037D-2E32-4D0C-8D39-5B585D353B5F}
+	EndGlobalSection
+EndGlobal
