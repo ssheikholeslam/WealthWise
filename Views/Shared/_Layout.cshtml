@@ -4,42 +4,78 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WealthWise</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WealthWise.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/output.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui/dist/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+    <div class="glow"></div>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WealthWise</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+        <div class="navbar navbar-floating navbar-glass responsive">
+            <span class="material-icons">savings</span>
+            <a class="font-black" asp-area="" asp-controller="Home" asp-action="Index">
+                WealthWise
+            </a>
+            <div class="navbar-start hidden">
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Features">Features</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Method">Method</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Customers">Customers</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Changelog">Changelog</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Integration">Integration</a>
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Pricing">Pricing</a>
+                <div class="dropdown-container">
+                    <div class="dropdown dropdown-hover">
+                        <label class="flex" tabindex="0">
+                            <span class="material-icons-container">
+                                <span>Company</span>
+                                <span class="material-icons">expand_more</span>
+                            </span>
+                        </label>
+                        <div class="dropdown-menu dropdown-menu-bottom-center">
+                            <div class="dropdown-collection">
+                                <div tdivbindex="-1" class="dropdown-item" role="menuitem">
+                                    <span class="material-icons-container">
+                                        <span class="material-icons">groups</span>
+                                        <span class="align-middle">About</span>
+                                    </span>
+                                </div>
+                                <div tabindex="-1" class="dropdown-item" role="menuitem">
+                                    <div >
+                                        <span class="material-icons-container">
+                                            <span class="material-icons">history_edu</span>
+                                            <span class="align-middle">Blog</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div tabindex="-1" class="dropdown-item" role="menuitem">
+                                    <span class="material-icons-container">
+                                        <span class="material-icons">business_center</span>
+                                        <span class="align-middle">Careers</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            <div class="navbar-end">
+                <partial name="_LoginPartial" />
             </div>
-        </nav>
+            <button class="navbar-burger md:hidden border border-white flex items-center px-3 py-2 rounded text-white" type="button" @click="isActive = !isActive">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
     </header>
-    <div class="container">
+    <div class="container" style="padding-top:100px;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - WealthWise - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-t-2 border-gray-400 py-4 text-gray-500 text-center">
+        <div class="container mx-auto">
+            &copy; 2023 - WealthWise - <a class="text-gray-600 hover:text-gray-800" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
