@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WealthWise</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="~/css/output.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui/dist/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="~/css/site.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <div class="glow"></div>
     <header>
+        @* TODO: Make navbar collapsible and viewport dynamic  *@
         <div class="navbar navbar-floating navbar-glass responsive">
             <span class="material-icons">savings</span>
             <a class="font-black" asp-area="" asp-controller="Home" asp-action="Index">
@@ -21,16 +23,15 @@
             <div class="navbar-start hidden">
                 <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Features">Features</a>
                 <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Method">Method</a>
-                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Customers">Customers</a>
-                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Changelog">Changelog</a>
-                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Integration">Integration</a>
+                <a class="navbar-item hidden lg:block" asp-area="" asp-controller="Home" asp-action="Customers">Customers</a>
+                <a class="navbar-item hidden lg:block" asp-area="" asp-controller="Home" asp-action="Changelog">Changelog</a>
+                <a class="navbar-item hidden lg:block" asp-area="" asp-controller="Home" asp-action="Integration">Integration</a>
                 <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Pricing">Pricing</a>
                 <div class="dropdown-container">
                     <div class="dropdown dropdown-hover">
                         <label class="flex" tabindex="0">
                             <span class="material-icons-container">
-                                <span>Company</span>
-                                <span class="material-icons">expand_more</span>
+                                <span class="py-2 px-3">Company<span class="material-icons m-0 align-middle">expand_more</span> </span>
                             </span>
                         </label>
                         <div class="dropdown-menu dropdown-menu-bottom-center">
@@ -62,24 +63,21 @@
             <div class="navbar-end">
                 <partial name="_LoginPartial" />
             </div>
-            <button class="navbar-burger md:hidden border border-white flex items-center px-3 py-2 rounded text-white" type="button" @click="isActive = !isActive">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-            </button>
         </div>
     </header>
-    <div class="container" style="padding-top:100px;">
+    <div class="m-0 pt-24">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-t-2 border-gray-400 py-4 text-gray-500 text-center">
+    @* TODO: Add dyanmic footer *@
+    @* <footer class="border-t-2 border-gray-400 py-4 text-gray-500 sticky bottom-0 text-center">
         <div class="container mx-auto">
             &copy; 2023 - WealthWise - <a class="text-gray-600 hover:text-gray-800" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer> *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
