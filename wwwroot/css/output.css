@@ -714,7 +714,7 @@ body {
   height: 4em;
   border-radius: 35px;
   padding: 18px 30px;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .hero-btn:hover {
