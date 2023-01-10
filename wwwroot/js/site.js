@@ -13,7 +13,7 @@ window.addEventListener("load", (event) => {
     heroGradientElement = document.querySelector('.hero-gradient');
     heroGlowElement = document.querySelector('.hero-glow');
     heroImageElement = document.querySelector('.hero-image');
-    sketchLinesSVG = document.querySelector('.sketch-lines');
+    sketchLinesSVG = document.querySelector('.animation__sketch-lines');
 
     createObserver();
 }, false);
@@ -34,10 +34,10 @@ function createObserver() {
 function handleIntersect(entries, observer) {
     entries.forEach((entry) => {
         if (entry.intersectionRatio >= 0.4) {
-            heroGradientElement.style.animation = 'rotate-image 1400ms ease forwards';
-            heroGlowElement.style.animation = 'image-glow 1400ms 680ms ease forwards'; 
-            sketchLinesSVG.style.animation = 'sketch-lines 1200ms ease-out forwards';
-            heroImageElement.style.animation = 'image-fade 1400ms 500ms ease-in forwards';
+            heroGradientElement.style.animation = 'animation__rotate-image 1400ms ease forwards';
+            heroGlowElement.style.animation = 'animation__image-glow 1400ms 680ms ease forwards'; 
+            sketchLinesSVG.style.animation = 'animation__sketch-lines 1200ms ease-out forwards';
+            heroImageElement.style.animation = 'animation__image-fade 1400ms 500ms ease-in forwards';
         } 
     });
 }
