@@ -1063,6 +1063,14 @@ Login Page
   border-radius: 4px;
   color: rgb(238, 239, 252);
   margin: 0px;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
+.email-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(0, 149, 122, 1);
+}
 
+.SAML-login {
+  display: none;
+}

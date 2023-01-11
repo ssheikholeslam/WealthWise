@@ -61,6 +61,11 @@ body {
                                                                         Navbar 
 ------------------------------------------------------------------------------------------------------------------------------------------------ 
 */
+  .wealth-wise-logo {
+    background: linear-gradient(45deg, rgb(0, 104, 67), rgb(0, 149, 122));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .navbar-item:first-child {
     padding-left: 30px;
