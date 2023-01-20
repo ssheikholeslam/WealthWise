@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WealthWise</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="~/css/output.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui/dist/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="~/css/output.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
 </head>
 <body>
@@ -36,19 +37,17 @@
                         </label>
                         <div class="dropdown-menu dropdown-menu-bottom-center">
                             <div class="dropdown-collection">
-                                <div tdivbindex="-1" class="dropdown-item" role="menuitem">
+                                <div tabindex="-1" class="dropdown-item" role="menuitem">
                                     <span class="material-icons-container">
                                         <span class="material-icons">groups</span>
                                         <span class="align-middle">About</span>
                                     </span>
                                 </div>
                                 <div tabindex="-1" class="dropdown-item" role="menuitem">
-                                    <div >
-                                        <span class="material-icons-container">
-                                            <span class="material-icons">history_edu</span>
-                                            <span class="align-middle">Blog</span>
-                                        </span>
-                                    </div>
+                                    <span class="material-icons-container">
+                                        <span class="material-icons">history_edu</span>
+                                        <span class="align-middle">Blog</span>
+                                    </span>
                                 </div>
                                 <div tabindex="-1" class="dropdown-item" role="menuitem">
                                     <span class="material-icons-container">
@@ -72,11 +71,11 @@
     </div>
 
     @* TODO: Add dyanmic footer *@
-    @* <footer class="border-t-2 border-gray-400 py-4 text-gray-500 sticky bottom-0 text-center">
+    <footer class="border-t-2 border-gray-400 py-4 text-gray-500 bottom-0 text-center">
         <div class="container mx-auto">
             &copy; 2023 - WealthWise - <a class="text-gray-600 hover:text-gray-800" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer> *@
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
